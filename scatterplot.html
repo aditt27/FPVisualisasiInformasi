@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Scatter Plot - FP VI</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/custom.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/highlight.css">
+
+</head>
+
+<body id="page-top">
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand" href="/">Countries of The World</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="barplot.html">Bar Chart</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="piechart.html">Pie Chart</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="map.html">Map</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="scatterplot.html">Scatter Plot</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="distplot.html">Dist Plot</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="bg-primary text-white">
+    <div class="container">
+        <h1>Scatter Plot</h1>
+        <h5>Hubungan Antara Tingkat Literasi Dengan Kematian Mayi</h5>
+        <br>
+        <div id="e399477d-4a40-4706-a2b7-f58250ce6552" class="plotly-graph-div" style="height:600px; width:100%;"></div>
+    </div>
+</header>
+
+<section id="what">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>What?</h2>
+                <p class="text-justify">Scatterplot akan merepresentasikan hubungan antar dua variabel, dalam hal ini adalah hubungan antara tingkat literasi dan angka kematian bayi.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="when">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>When?</h2>
+                <p class="text-justify">Data yang ditampilkan adalah data tingkat literasi dan kematian bayi tiap negara pada Region tertentu tahun 2017.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="why">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Why?</h2>
+                <p class="text-justify">Scatter Plot dipilih agar dapat memvisualisasikan hubungan antar variabel secara baik.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="how">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>How?</h2>
+                <p class="text-justify">Visualisasi dibuat dengan menggunakan library Plotly Express agar visualisasi lebih interaktif. Dalam library tersebut, map dibangun dengan menggunakan fungsi “scatter”.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="sourcecode">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <button data-toggle="collapse" data-target="#demo" class="btn btn-primary btn-block">Source Code (Python)</button>
+                <br>
+                <div id="demo" class="highlight hl-ipython3 collapse">
+                    <pre>
+<span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
+<span class="c1">#Scatter Plot</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;Infant mortality (per 1000 births)&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Literacy (%)&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;Region&quot;</span><span class="p">,</span>
+                 <span class="n">hover_data</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Country&#39;</span><span class="p">],</span> <span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Hubungan antara tingkat literasi dengan kematian bayi&quot;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="py-5 bg-dark">
+    <div class="container">
+        <p class="m-0 text-center text-white">FPVI 2019</p>
+    </div>
+    <!-- /.container -->
+</footer>
+
+<!-- Bootstrap core JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+
+
+</body>
+
+<!-- Barplot -->
+<script src="js/plotly.js" type="text/javascript"></script>
+<script type="text/javascript">
+    require(["plotly"], function(Plotly) {
+        window.PLOTLYENV = window.PLOTLYENV || {};
+
+        if (document.getElementById("e399477d-4a40-4706-a2b7-f58250ce6552")) {
+            Plotly.newPlot(
+                'e399477d-4a40-4706-a2b7-f58250ce6552',
+                [{
+                    "customdata": [
+                        ["Afghanistan "],
+                        ["Bangladesh "],
+                        ["Bhutan "],
+                        ["Brunei "],
+                        ["Burma "],
+                        ["Cambodia "],
+                        ["China "],
+                        ["East Timor "],
+                        ["Hong Kong "],
+                        ["India "],
+                        ["Indonesia "],
+                        ["Iran "],
+                        ["Japan "],
+                        ["Korea, North "],
+                        ["Korea, South "],
+                        ["Laos "],
+                        ["Macau "],
+                        ["Malaysia "],
+                        ["Maldives "],
+                        ["Mongolia "],
+                        ["Nepal "],
+                        ["Pakistan "],
+                        ["Philippines "],
+                        ["Singapore "],
+                        ["Sri Lanka "],
+                        ["Taiwan "],
+                        ["Thailand "],
+                        ["Vietnam "]
+                    ],
+                    "hoverlabel": {
+                        "namelength": 0
+                    },
+                    "hovertemplate": "Region=ASIA (EX. NEAR EAST)         <br>Infant mortality (per 1000 births)=%{x}<br>Literacy (%)=%{y}<br>Country=%{customdata[0]}",
+                    "legendgroup": "Region=ASIA (EX. NEAR EAST)         ",
+                    "marker": {
+                        "color": "#636efa",
+                        "symbol": "circle"
+                    },
+                    "mode": "markers",
+                    "name": "Region=ASIA (EX. NEAR EAST)         ",
+                    "showlegend": true,
+                    "type": "scatter",
+                    "x": [163.07, 62.6, 100.44, 12.61, 67.24, 71.48, 24.18, 47.41, 2.97, 56.29, 35.6, 41.58, 3.26, 24.04, 7.05, 85.22, 4.39, 17.7, 56.52, 53.79, 66.98, 72.44, 23.51, 2.29, 14.35, 6.4, 20.48, 25.95],
+                    "xaxis": "x",
+                    "y": [36.0, 43.1, 42.2, 93.9, 85.3, 69.4, 90.9, 58.6, 93.5, 59.5, 87.9, 79.4, 99.0, 99.0, 97.9, 66.4, 94.5, 88.7, 97.2, 97.8, 45.2, 45.7, 92.6, 92.5, 92.3, 96.1, 92.6, 90.3],
+                    "yaxis": "y"
+                }, {
+                    "customdata": [
+                        ["Albania "],
+                        ["Bosnia & Herzegovina "],
+                        ["Bulgaria "],
+                        ["Croatia "],
+                        ["Czech Republic "],
+                        ["Hungary "],
+                        ["Macedonia "],
+                        ["Poland "],
+                        ["Romania "],
+                        ["Serbia "],
+                        ["Slovakia "],
+                        ["Slovenia "]
+                    ],
+                    "hoverlabel": {
+                        "namelength": 0
+                    },
+                    "hovertemplate": "Region=EASTERN EUROPE                     <br>Infant mortality (per 1000 births)=%{x}<br>Literacy (%)=%{y}<br>Country=%{customdata[0]}",
+                    "legendgroup": "Region=EASTERN EUROPE                     ",
+                    "marker": {
+                        "color": "#EF553B",
+                        "symbol": "circle"
+                    },
+                    "mode": "markers",
+                    "name": "Region=EASTERN EUROPE                     ",
+                    "showlegend": true,
+                    "type": "scatter",
+                    "x": [21.52, 21.05, 20.55, 6.84, 3.93, 8.57, 10.09, 8.51, 26.43, 12.89, 7.41, 4.45],
+                    "xaxis": "x",
+                    "y": [86.5, 82.83827751196172, 98.6, 98.5, 99.9, 99.4, 82.83827751196172, 99.8, 98.4, 93.0, 82.83827751196172, 99.7],
+                    "yaxis": "y"
+                }, {
+                    "customdata": [
+                        ["Algeria "],
+                        ["Egypt "],
+                        ["Libya "],
+                        ["Morocco "],
+                        ["Tunisia "],
+                        ["Western Sahara "]
+                    ],
+                    "hoverlabel": {
+                        "namelength": 0
+                    },
+                    "hovertemplate": "Region=NORTHERN AFRICA                    <br>Infant mortality (per 1000 births)=%{x}<br>Literacy (%)=%{y}<br>Country=%{customdata[0]}",
+                    "legendgroup": "Region=NORTHERN AFRICA                    ",
+                    "marker": {
+                        "color": "#00cc96",
+                        "symbol": "circle"
+                    },
+                    "mode": "markers",
+                    "name": "Region=NORTHERN AFRICA                    ",
+                    "showlegend": true,
+                    "type": "scatter",
+                    "x": [31.0, 32.59, 24.6, 41.62, 24.77, 35.50696428571427],
+                    "xaxis": "x",
+                    "y": [70.0, 57.7, 82.6, 51.7, 74.2, 82.83827751196172],
+                    "yaxis": "y"
+                }, {
+                    "customdata": [
+                        ["American Samoa "],
+                        ["Australia "],
+                        ["Cook Islands "],
+                        ["Fiji "],
+                        ["French Polynesia "],
+                        ["Guam "],
+                        ["Kiribati "],
+                        ["Marshall Islands "],
+                        ["Micronesia, Fed. St. "],
+                        ["Nauru "],
+                        ["New Caledonia "],
+                        ["New Zealand "],
+                        ["N. Mariana Islands "],
+                        ["Palau "],
+                        ["Papua New Guinea "],
+                        ["Samoa "],
+                        ["Solomon Islands "],
+                        ["Tonga "],
+                        ["Tuvalu "],
+                        ["Vanuatu "],
+                        ["Wallis and Futuna "]
+                    ],
+                    "hoverlabel": {
+                        "namelength": 0
+                    },
+                    "hovertemplate": "Region=OCEANIA                            <br>Infant mortality (per 1000 births)=%{x}<br>Literacy (%)=%{y}<br>Country=%{customdata[0]}",
+                    "legendgroup": "Region=OCEANIA                            ",
+                    "marker": {
+                        "color": "#ab63fa",
+                        "symbol": "circle"
+                    },
+                    "mode": "markers",
+                    "name": "Region=OCEANIA                            ",
+                    "showlegend": true,
+                    "type": "scatter",
+                    "x": [9.27, 4.69, 35.50696428571427, 12.62, 8.44, 6.94, 48.52, 29.45, 30.21, 9.95, 7.72, 5.85, 7.11, 14.84, 51.45, 27.71, 21.29, 12.62, 20.03, 55.16, 35.50696428571427],
+                    "xaxis": "x",
+                    "y": [97.0, 100.0, 95.0, 93.7, 98.0, 99.0, 82.83827751196172, 93.7, 89.0, 82.83827751196172, 91.0, 99.0, 97.0, 92.0, 64.6, 99.7, 82.83827751196172, 98.5, 82.83827751196172, 53.0, 50.0],
+                    "yaxis": "y"
+                }, {
+                    "customdata": [
+                        ["Andorra "],
+                        ["Austria "],
+                        ["Belgium "],
+                        ["Denmark "],
+                        ["Faroe Islands "],
+                        ["Finland "],
+                        ["France "],
+                        ["Germany "],
+                        ["Gibraltar "],
+                        ["Greece "],
+                        ["Guernsey "],
+                        ["Iceland "],
+                        ["Ireland "],
+                        ["Isle of Man "],
+                        ["Italy "],
+                        ["Jersey "],
+                        ["Liechtenstein "],
+                        ["Luxembourg "],
+                        ["Malta "],
+                        ["Monaco "],
+                        ["Netherlands "],
+                        ["Norway "],
+                        ["Portugal "],
+                        ["San Marino "],
+                        ["Spain "],
+                        ["Sweden "],
+                        ["Switzerland "],
+                        ["United Kingdom "]
+                    ],
+                    "hoverlabel": {
+                        "namelength": 0
+                    },
+                    "hovertemplate": "Region=WESTERN EUROPE                     <br>Infant mortality (per 1000 births)=%{x}<br>Literacy (%)=%{y}<br>Country=%{customdata[0]}",
+                    "legendgroup": "Region=WESTERN EUROPE                     ",
+                    "marker": {
+                        "color": "#FFA15A",
+                        "symbol": "circle"
+                    },
+                    "mode": "markers",
+                    "name": "Region=WESTERN EUROPE                     ",
+                    "showlegend": true,
+                    "type": "scatter",
+                    "x": [4.05, 4.66, 4.68, 4.56, 6.24, 3.57, 4.26, 4.16, 5.13, 5.53, 4.71, 3.31, 5.39, 5.93, 5.94, 5.24, 4.7, 4.81, 3.89, 5.43, 5.04, 3.7, 5.05, 5.73, 4.42, 2.77, 4.39, 5.16],
+                    "xaxis": "x",
+                    "y": [100.0, 98.0, 98.0, 100.0, 82.83827751196172, 100.0, 99.0, 99.0, 82.83827751196172, 97.5, 82.83827751196172, 99.9, 98.0, 82.83827751196172, 98.6, 82.83827751196172, 100.0, 100.0, 92.8, 99.0, 99.0, 100.0, 93.3, 96.0, 97.9, 99.0, 99.0, 99.0],
+                    "yaxis": "y"
+                }, {
+                    "customdata": [
+                        ["Angola "],
+                        ["Benin "],
+                        ["Botswana "],
+                        ["Burkina Faso "],
+                        ["Burundi "],
+                        ["Cameroon "],
+                        ["Cape Verde "],
+                        ["Central African Rep. "],
+                        ["Chad "],
+                        ["Comoros "],
+                        ["Congo, Dem. Rep. "],
+                        ["Congo, Repub. of the "],
+                        ["Cote d'Ivoire "],
+                        ["Djibouti "],
+                        ["Equatorial Guinea "],
+                        ["Eritrea "],
+                        ["Ethiopia "],
+                        ["Gabon "],
+                        ["Gambia, The "],
+                        ["Ghana "],
+                        ["Guinea "],
+                        ["Guinea-Bissau "],
+                        ["Kenya "],
+                        ["Lesotho "],
+                        ["Liberia "],
+                        ["Madagascar "],
+                        ["Malawi "],
+                        ["Mali "],
+                        ["Mauritania "],
+                        ["Mauritius "],
+                        ["Mayotte "],
+                        ["Mozambique "],
+                        ["Namibia "],
+                        ["Niger "],
+                        ["Nigeria "],
+                        ["Reunion "],
+                        ["Rwanda "],
+                        ["Saint Helena "],
+                        ["Sao Tome & Principe "],
+                        ["Senegal "],
+                        ["Seychelles "],
+                        ["Sierra Leone "],
+                        ["Somalia "],
+                        ["South Africa "],
+                        ["Sudan "],
+                        ["Swaziland "],
+                        ["Tanzania "],
+                        ["Togo "],
+                        ["Uganda "],
+                        ["Zambia "],
+                        ["Zimbabwe "]
+                    ],
+                    "hoverlabel": {
+                        "namelength": 0
+                    },
+                    "hovertemplate": "Region=SUB-SAHARAN AFRICA                 <br>Infant mortality (per 1000 births)=%{x}<br>Literacy (%)=%{y}<br>Country=%{customdata[0]}",
+                    "legendgroup": "Region=SUB-SAHARAN AFRICA                 ",
+                    "marker": {
+                        "color": "#19d3f3",
+                        "symbol": "circle"
+                    },
+                    "mode": "markers",
+                    "name": "Region=SUB-SAHARAN AFRICA                 ",
+                    "showlegend": true,
+                    "type": "scatter",
+                    "x": [191.19, 85.0, 54.58, 97.57, 69.29, 68.26, 47.77, 91.0, 93.82, 74.93, 94.69, 93.86, 90.83, 104.13, 85.13, 74.87, 95.32, 53.64, 72.02, 51.43, 90.37, 107.17, 61.47, 84.23, 128.87, 76.83, 103.32, 116.79, 70.89, 15.03, 62.4, 130.79, 48.98, 121.69, 98.8, 7.78, 91.23, 19.0, 43.11, 55.51, 15.53, 143.64, 116.7, 61.81, 62.5, 69.27, 98.54, 66.61, 67.83, 88.29, 67.69],
+                    "xaxis": "x",
+                    "y": [42.0, 40.9, 79.8, 26.6, 51.6, 79.0, 76.6, 51.0, 47.5, 56.5, 65.5, 83.8, 50.9, 67.9, 85.7, 58.6, 42.7, 63.2, 40.1, 74.8, 35.9, 42.4, 85.1, 84.8, 57.5, 68.9, 62.7, 46.4, 41.7, 85.6, 82.83827751196172, 47.8, 84.0, 17.6, 68.0, 88.9, 70.4, 97.0, 79.3, 40.2, 58.0, 31.4, 37.8, 86.4, 61.1, 81.6, 78.2, 60.9, 69.9, 80.6, 90.7],
+                    "yaxis": "y"
+                }, {
+                    "customdata": [
+                        ["Anguilla "],
+                        ["Antigua & Barbuda "],
+                        ["Argentina "],
+                        ["Aruba "],
+                        ["Bahamas, The "],
+                        ["Barbados "],
+                        ["Belize "],
+                        ["Bolivia "],
+                        ["Brazil "],
+                        ["British Virgin Is. "],
+                        ["Cayman Islands "],
+                        ["Chile "],
+                        ["Colombia "],
+                        ["Costa Rica "],
+                        ["Cuba "],
+                        ["Dominica "],
+                        ["Dominican Republic "],
+                        ["Ecuador "],
+                        ["El Salvador "],
+                        ["French Guiana "],
+                        ["Grenada "],
+                        ["Guadeloupe "],
+                        ["Guatemala "],
+                        ["Guyana "],
+                        ["Haiti "],
+                        ["Honduras "],
+                        ["Jamaica "],
+                        ["Martinique "],
+                        ["Mexico "],
+                        ["Montserrat "],
+                        ["Netherlands Antilles "],
+                        ["Nicaragua "],
+                        ["Panama "],
+                        ["Paraguay "],
+                        ["Peru "],
+                        ["Puerto Rico "],
+                        ["Saint Kitts & Nevis "],
+                        ["Saint Lucia "],
+                        ["Saint Vincent and the Grenadines "],
+                        ["Suriname "],
+                        ["Trinidad & Tobago "],
+                        ["Turks & Caicos Is "],
+                        ["Uruguay "],
+                        ["Venezuela "],
+                        ["Virgin Islands "]
+                    ],
+                    "hoverlabel": {
+                        "namelength": 0
+                    },
+                    "hovertemplate": "Region=LATIN AMER. & CARIB    <br>Infant mortality (per 1000 births)=%{x}<br>Literacy (%)=%{y}<br>Country=%{customdata[0]}",
+                    "legendgroup": "Region=LATIN AMER. & CARIB    ",
+                    "marker": {
+                        "color": "#FF6692",
+                        "symbol": "circle"
+                    },
+                    "mode": "markers",
+                    "name": "Region=LATIN AMER. & CARIB    ",
+                    "showlegend": true,
+                    "type": "scatter",
+                    "x": [21.03, 19.46, 15.18, 5.89, 25.21, 12.5, 25.69, 53.11, 29.61, 18.05, 8.19, 8.8, 20.97, 9.95, 6.33, 14.15, 32.38, 23.66, 25.1, 12.07, 14.62, 8.6, 35.93, 33.26, 73.45, 29.32, 12.36, 7.09, 20.91, 7.35, 10.03, 29.11, 20.47, 25.63, 31.94, 8.24, 14.49, 13.53, 14.78, 23.57, 24.31, 15.67, 11.95, 22.2, 8.03],
+                    "xaxis": "x",
+                    "y": [95.0, 89.0, 97.1, 97.0, 95.6, 97.4, 94.1, 87.2, 86.4, 97.8, 98.0, 96.2, 92.5, 96.0, 97.0, 94.0, 84.7, 92.5, 80.2, 83.0, 98.0, 90.0, 70.6, 98.8, 52.9, 76.2, 87.9, 97.7, 92.2, 97.0, 96.7, 67.5, 92.6, 94.0, 90.9, 94.1, 97.0, 67.0, 96.0, 93.0, 98.6, 98.0, 98.0, 93.4, 82.83827751196172],
+                    "yaxis": "y"
+                }, {
+                    "customdata": [
+                        ["Armenia "],
+                        ["Azerbaijan "],
+                        ["Belarus "],
+                        ["Georgia "],
+                        ["Kazakhstan "],
+                        ["Kyrgyzstan "],
+                        ["Moldova "],
+                        ["Russia "],
+                        ["Tajikistan "],
+                        ["Turkmenistan "],
+                        ["Ukraine "],
+                        ["Uzbekistan "]
+                    ],
+                    "hoverlabel": {
+                        "namelength": 0
+                    },
+                    "hovertemplate": "Region=C.W. OF IND. STATES <br>Infant mortality (per 1000 births)=%{x}<br>Literacy (%)=%{y}<br>Country=%{customdata[0]}",
+                    "legendgroup": "Region=C.W. OF IND. STATES ",
+                    "marker": {
+                        "color": "#B6E880",
+                        "symbol": "circle"
+                    },
+                    "mode": "markers",
+                    "name": "Region=C.W. OF IND. STATES ",
+                    "showlegend": true,
+                    "type": "scatter",
+                    "x": [23.28, 81.74, 13.37, 18.59, 29.21, 35.64, 40.42, 15.39, 110.76, 73.08, 20.34, 71.1],
+                    "xaxis": "x",
+                    "y": [98.6, 97.0, 99.6, 99.0, 98.4, 97.0, 99.1, 99.6, 99.4, 98.0, 99.7, 99.3],
+                    "yaxis": "y"
+                }, {
+                    "customdata": [
+                        ["Bahrain "],
+                        ["Cyprus "],
+                        ["Gaza Strip "],
+                        ["Iraq "],
+                        ["Israel "],
+                        ["Jordan "],
+                        ["Kuwait "],
+                        ["Lebanon "],
+                        ["Oman "],
+                        ["Qatar "],
+                        ["Saudi Arabia "],
+                        ["Syria "],
+                        ["Turkey "],
+                        ["United Arab Emirates "],
+                        ["West Bank "],
+                        ["Yemen "]
+                    ],
+                    "hoverlabel": {
+                        "namelength": 0
+                    },
+                    "hovertemplate": "Region=NEAR EAST                          <br>Infant mortality (per 1000 births)=%{x}<br>Literacy (%)=%{y}<br>Country=%{customdata[0]}",
+                    "legendgroup": "Region=NEAR EAST                          ",
+                    "marker": {
+                        "color": "#FF97FF",
+                        "symbol": "circle"
+                    },
+                    "mode": "markers",
+                    "name": "Region=NEAR EAST                          ",
+                    "showlegend": true,
+                    "type": "scatter",
+                    "x": [17.27, 7.18, 22.93, 50.25, 7.03, 17.35, 9.95, 24.52, 19.51, 18.61, 13.24, 29.53, 41.04, 14.51, 19.62, 61.5],
+                    "xaxis": "x",
+                    "y": [89.1, 97.6, 82.83827751196172, 40.4, 95.4, 91.3, 83.5, 87.4, 75.8, 82.5, 78.8, 76.9, 86.5, 77.9, 82.83827751196172, 50.2],
+                    "yaxis": "y"
+                }, {
+                    "customdata": [
+                        ["Bermuda "],
+                        ["Canada "],
+                        ["Greenland "],
+                        ["St Pierre & Miquelon "],
+                        ["United States "]
+                    ],
+                    "hoverlabel": {
+                        "namelength": 0
+                    },
+                    "hovertemplate": "Region=NORTHERN AMERICA                   <br>Infant mortality (per 1000 births)=%{x}<br>Literacy (%)=%{y}<br>Country=%{customdata[0]}",
+                    "legendgroup": "Region=NORTHERN AMERICA                   ",
+                    "marker": {
+                        "color": "#FECB52",
+                        "symbol": "circle"
+                    },
+                    "mode": "markers",
+                    "name": "Region=NORTHERN AMERICA                   ",
+                    "showlegend": true,
+                    "type": "scatter",
+                    "x": [8.53, 4.75, 15.82, 7.54, 6.5],
+                    "xaxis": "x",
+                    "y": [98.0, 97.0, 82.83827751196172, 99.0, 97.0],
+                    "yaxis": "y"
+                }, {
+                    "customdata": [
+                        ["Estonia "],
+                        ["Latvia "],
+                        ["Lithuania "]
+                    ],
+                    "hoverlabel": {
+                        "namelength": 0
+                    },
+                    "hovertemplate": "Region=BALTICS                            <br>Infant mortality (per 1000 births)=%{x}<br>Literacy (%)=%{y}<br>Country=%{customdata[0]}",
+                    "legendgroup": "Region=BALTICS                            ",
+                    "marker": {
+                        "color": "#636efa",
+                        "symbol": "circle"
+                    },
+                    "mode": "markers",
+                    "name": "Region=BALTICS                            ",
+                    "showlegend": true,
+                    "type": "scatter",
+                    "x": [7.87, 9.55, 6.89],
+                    "xaxis": "x",
+                    "y": [99.8, 99.8, 99.6],
+                    "yaxis": "y"
+                }], {
+                    "height": 600,
+                    "legend": {
+                        "tracegroupgap": 0
+                    },
+                    "template": {
+                        "data": {
+                            "bar": [{
+                                "error_x": {
+                                    "color": "#2a3f5f"
+                                },
+                                "error_y": {
+                                    "color": "#2a3f5f"
+                                },
+                                "marker": {
+                                    "line": {
+                                        "color": "#E5ECF6",
+                                        "width": 0.5
+                                    }
+                                },
+                                "type": "bar"
+                            }],
+                            "barpolar": [{
+                                "marker": {
+                                    "line": {
+                                        "color": "#E5ECF6",
+                                        "width": 0.5
+                                    }
+                                },
+                                "type": "barpolar"
+                            }],
+                            "carpet": [{
+                                "aaxis": {
+                                    "endlinecolor": "#2a3f5f",
+                                    "gridcolor": "white",
+                                    "linecolor": "white",
+                                    "minorgridcolor": "white",
+                                    "startlinecolor": "#2a3f5f"
+                                },
+                                "baxis": {
+                                    "endlinecolor": "#2a3f5f",
+                                    "gridcolor": "white",
+                                    "linecolor": "white",
+                                    "minorgridcolor": "white",
+                                    "startlinecolor": "#2a3f5f"
+                                },
+                                "type": "carpet"
+                            }],
+                            "choropleth": [{
+                                "colorbar": {
+                                    "outlinewidth": 0,
+                                    "ticks": ""
+                                },
+                                "type": "choropleth"
+                            }],
+                            "contour": [{
+                                "colorbar": {
+                                    "outlinewidth": 0,
+                                    "ticks": ""
+                                },
+                                "colorscale": [
+                                    [0.0, "#0d0887"],
+                                    [0.1111111111111111, "#46039f"],
+                                    [0.2222222222222222, "#7201a8"],
+                                    [0.3333333333333333, "#9c179e"],
+                                    [0.4444444444444444, "#bd3786"],
+                                    [0.5555555555555556, "#d8576b"],
+                                    [0.6666666666666666, "#ed7953"],
+                                    [0.7777777777777778, "#fb9f3a"],
+                                    [0.8888888888888888, "#fdca26"],
+                                    [1.0, "#f0f921"]
+                                ],
+                                "type": "contour"
+                            }],
+                            "contourcarpet": [{
+                                "colorbar": {
+                                    "outlinewidth": 0,
+                                    "ticks": ""
+                                },
+                                "type": "contourcarpet"
+                            }],
+                            "heatmap": [{
+                                "colorbar": {
+                                    "outlinewidth": 0,
+                                    "ticks": ""
+                                },
+                                "colorscale": [
+                                    [0.0, "#0d0887"],
+                                    [0.1111111111111111, "#46039f"],
+                                    [0.2222222222222222, "#7201a8"],
+                                    [0.3333333333333333, "#9c179e"],
+                                    [0.4444444444444444, "#bd3786"],
+                                    [0.5555555555555556, "#d8576b"],
+                                    [0.6666666666666666, "#ed7953"],
+                                    [0.7777777777777778, "#fb9f3a"],
+                                    [0.8888888888888888, "#fdca26"],
+                                    [1.0, "#f0f921"]
+                                ],
+                                "type": "heatmap"
+                            }],
+                            "heatmapgl": [{
+                                "colorbar": {
+                                    "outlinewidth": 0,
+                                    "ticks": ""
+                                },
+                                "colorscale": [
+                                    [0.0, "#0d0887"],
+                                    [0.1111111111111111, "#46039f"],
+                                    [0.2222222222222222, "#7201a8"],
+                                    [0.3333333333333333, "#9c179e"],
+                                    [0.4444444444444444, "#bd3786"],
+                                    [0.5555555555555556, "#d8576b"],
+                                    [0.6666666666666666, "#ed7953"],
+                                    [0.7777777777777778, "#fb9f3a"],
+                                    [0.8888888888888888, "#fdca26"],
+                                    [1.0, "#f0f921"]
+                                ],
+                                "type": "heatmapgl"
+                            }],
+                            "histogram": [{
+                                "marker": {
+                                    "colorbar": {
+                                        "outlinewidth": 0,
+                                        "ticks": ""
+                                    }
+                                },
+                                "type": "histogram"
+                            }],
+                            "histogram2d": [{
+                                "colorbar": {
+                                    "outlinewidth": 0,
+                                    "ticks": ""
+                                },
+                                "colorscale": [
+                                    [0.0, "#0d0887"],
+                                    [0.1111111111111111, "#46039f"],
+                                    [0.2222222222222222, "#7201a8"],
+                                    [0.3333333333333333, "#9c179e"],
+                                    [0.4444444444444444, "#bd3786"],
+                                    [0.5555555555555556, "#d8576b"],
+                                    [0.6666666666666666, "#ed7953"],
+                                    [0.7777777777777778, "#fb9f3a"],
+                                    [0.8888888888888888, "#fdca26"],
+                                    [1.0, "#f0f921"]
+                                ],
+                                "type": "histogram2d"
+                            }],
+                            "histogram2dcontour": [{
+                                "colorbar": {
+                                    "outlinewidth": 0,
+                                    "ticks": ""
+                                },
+                                "colorscale": [
+                                    [0.0, "#0d0887"],
+                                    [0.1111111111111111, "#46039f"],
+                                    [0.2222222222222222, "#7201a8"],
+                                    [0.3333333333333333, "#9c179e"],
+                                    [0.4444444444444444, "#bd3786"],
+                                    [0.5555555555555556, "#d8576b"],
+                                    [0.6666666666666666, "#ed7953"],
+                                    [0.7777777777777778, "#fb9f3a"],
+                                    [0.8888888888888888, "#fdca26"],
+                                    [1.0, "#f0f921"]
+                                ],
+                                "type": "histogram2dcontour"
+                            }],
+                            "mesh3d": [{
+                                "colorbar": {
+                                    "outlinewidth": 0,
+                                    "ticks": ""
+                                },
+                                "type": "mesh3d"
+                            }],
+                            "parcoords": [{
+                                "line": {
+                                    "colorbar": {
+                                        "outlinewidth": 0,
+                                        "ticks": ""
+                                    }
+                                },
+                                "type": "parcoords"
+                            }],
+                            "scatter": [{
+                                "marker": {
+                                    "colorbar": {
+                                        "outlinewidth": 0,
+                                        "ticks": ""
+                                    }
+                                },
+                                "type": "scatter"
+                            }],
+                            "scatter3d": [{
+                                "line": {
+                                    "colorbar": {
+                                        "outlinewidth": 0,
+                                        "ticks": ""
+                                    }
+                                },
+                                "marker": {
+                                    "colorbar": {
+                                        "outlinewidth": 0,
+                                        "ticks": ""
+                                    }
+                                },
+                                "type": "scatter3d"
+                            }],
+                            "scattercarpet": [{
+                                "marker": {
+                                    "colorbar": {
+                                        "outlinewidth": 0,
+                                        "ticks": ""
+                                    }
+                                },
+                                "type": "scattercarpet"
+                            }],
+                            "scattergeo": [{
+                                "marker": {
+                                    "colorbar": {
+                                        "outlinewidth": 0,
+                                        "ticks": ""
+                                    }
+                                },
+                                "type": "scattergeo"
+                            }],
+                            "scattergl": [{
+                                "marker": {
+                                    "colorbar": {
+                                        "outlinewidth": 0,
+                                        "ticks": ""
+                                    }
+                                },
+                                "type": "scattergl"
+                            }],
+                            "scattermapbox": [{
+                                "marker": {
+                                    "colorbar": {
+                                        "outlinewidth": 0,
+                                        "ticks": ""
+                                    }
+                                },
+                                "type": "scattermapbox"
+                            }],
+                            "scatterpolar": [{
+                                "marker": {
+                                    "colorbar": {
+                                        "outlinewidth": 0,
+                                        "ticks": ""
+                                    }
+                                },
+                                "type": "scatterpolar"
+                            }],
+                            "scatterpolargl": [{
+                                "marker": {
+                                    "colorbar": {
+                                        "outlinewidth": 0,
+                                        "ticks": ""
+                                    }
+                                },
+                                "type": "scatterpolargl"
+                            }],
+                            "scatterternary": [{
+                                "marker": {
+                                    "colorbar": {
+                                        "outlinewidth": 0,
+                                        "ticks": ""
+                                    }
+                                },
+                                "type": "scatterternary"
+                            }],
+                            "surface": [{
+                                "colorbar": {
+                                    "outlinewidth": 0,
+                                    "ticks": ""
+                                },
+                                "colorscale": [
+                                    [0.0, "#0d0887"],
+                                    [0.1111111111111111, "#46039f"],
+                                    [0.2222222222222222, "#7201a8"],
+                                    [0.3333333333333333, "#9c179e"],
+                                    [0.4444444444444444, "#bd3786"],
+                                    [0.5555555555555556, "#d8576b"],
+                                    [0.6666666666666666, "#ed7953"],
+                                    [0.7777777777777778, "#fb9f3a"],
+                                    [0.8888888888888888, "#fdca26"],
+                                    [1.0, "#f0f921"]
+                                ],
+                                "type": "surface"
+                            }],
+                            "table": [{
+                                "cells": {
+                                    "fill": {
+                                        "color": "#EBF0F8"
+                                    },
+                                    "line": {
+                                        "color": "white"
+                                    }
+                                },
+                                "header": {
+                                    "fill": {
+                                        "color": "#C8D4E3"
+                                    },
+                                    "line": {
+                                        "color": "white"
+                                    }
+                                },
+                                "type": "table"
+                            }]
+                        },
+                        "layout": {
+                            "annotationdefaults": {
+                                "arrowcolor": "#2a3f5f",
+                                "arrowhead": 0,
+                                "arrowwidth": 1
+                            },
+                            "colorscale": {
+                                "diverging": [
+                                    [0, "#8e0152"],
+                                    [0.1, "#c51b7d"],
+                                    [0.2, "#de77ae"],
+                                    [0.3, "#f1b6da"],
+                                    [0.4, "#fde0ef"],
+                                    [0.5, "#f7f7f7"],
+                                    [0.6, "#e6f5d0"],
+                                    [0.7, "#b8e186"],
+                                    [0.8, "#7fbc41"],
+                                    [0.9, "#4d9221"],
+                                    [1, "#276419"]
+                                ],
+                                "sequential": [
+                                    [0.0, "#0d0887"],
+                                    [0.1111111111111111, "#46039f"],
+                                    [0.2222222222222222, "#7201a8"],
+                                    [0.3333333333333333, "#9c179e"],
+                                    [0.4444444444444444, "#bd3786"],
+                                    [0.5555555555555556, "#d8576b"],
+                                    [0.6666666666666666, "#ed7953"],
+                                    [0.7777777777777778, "#fb9f3a"],
+                                    [0.8888888888888888, "#fdca26"],
+                                    [1.0, "#f0f921"]
+                                ],
+                                "sequentialminus": [
+                                    [0.0, "#0d0887"],
+                                    [0.1111111111111111, "#46039f"],
+                                    [0.2222222222222222, "#7201a8"],
+                                    [0.3333333333333333, "#9c179e"],
+                                    [0.4444444444444444, "#bd3786"],
+                                    [0.5555555555555556, "#d8576b"],
+                                    [0.6666666666666666, "#ed7953"],
+                                    [0.7777777777777778, "#fb9f3a"],
+                                    [0.8888888888888888, "#fdca26"],
+                                    [1.0, "#f0f921"]
+                                ]
+                            },
+                            "colorway": ["#636efa", "#EF553B", "#00cc96", "#ab63fa", "#FFA15A", "#19d3f3", "#FF6692", "#B6E880", "#FF97FF", "#FECB52"],
+                            "font": {
+                                "color": "#2a3f5f"
+                            },
+                            "geo": {
+                                "bgcolor": "white",
+                                "lakecolor": "white",
+                                "landcolor": "#E5ECF6",
+                                "showlakes": true,
+                                "showland": true,
+                                "subunitcolor": "white"
+                            },
+                            "hoverlabel": {
+                                "align": "left"
+                            },
+                            "hovermode": "closest",
+                            "mapbox": {
+                                "style": "light"
+                            },
+                            "paper_bgcolor": "white",
+                            "plot_bgcolor": "#E5ECF6",
+                            "polar": {
+                                "angularaxis": {
+                                    "gridcolor": "white",
+                                    "linecolor": "white",
+                                    "ticks": ""
+                                },
+                                "bgcolor": "#E5ECF6",
+                                "radialaxis": {
+                                    "gridcolor": "white",
+                                    "linecolor": "white",
+                                    "ticks": ""
+                                }
+                            },
+                            "scene": {
+                                "xaxis": {
+                                    "backgroundcolor": "#E5ECF6",
+                                    "gridcolor": "white",
+                                    "gridwidth": 2,
+                                    "linecolor": "white",
+                                    "showbackground": true,
+                                    "ticks": "",
+                                    "zerolinecolor": "white"
+                                },
+                                "yaxis": {
+                                    "backgroundcolor": "#E5ECF6",
+                                    "gridcolor": "white",
+                                    "gridwidth": 2,
+                                    "linecolor": "white",
+                                    "showbackground": true,
+                                    "ticks": "",
+                                    "zerolinecolor": "white"
+                                },
+                                "zaxis": {
+                                    "backgroundcolor": "#E5ECF6",
+                                    "gridcolor": "white",
+                                    "gridwidth": 2,
+                                    "linecolor": "white",
+                                    "showbackground": true,
+                                    "ticks": "",
+                                    "zerolinecolor": "white"
+                                }
+                            },
+                            "shapedefaults": {
+                                "line": {
+                                    "color": "#2a3f5f"
+                                }
+                            },
+                            "ternary": {
+                                "aaxis": {
+                                    "gridcolor": "white",
+                                    "linecolor": "white",
+                                    "ticks": ""
+                                },
+                                "baxis": {
+                                    "gridcolor": "white",
+                                    "linecolor": "white",
+                                    "ticks": ""
+                                },
+                                "bgcolor": "#E5ECF6",
+                                "caxis": {
+                                    "gridcolor": "white",
+                                    "linecolor": "white",
+                                    "ticks": ""
+                                }
+                            },
+                            "title": {
+                                "x": 0.05
+                            },
+                            "xaxis": {
+                                "automargin": true,
+                                "gridcolor": "white",
+                                "linecolor": "white",
+                                "ticks": "",
+                                "zerolinecolor": "white",
+                                "zerolinewidth": 2
+                            },
+                            "yaxis": {
+                                "automargin": true,
+                                "gridcolor": "white",
+                                "linecolor": "white",
+                                "ticks": "",
+                                "zerolinecolor": "white",
+                                "zerolinewidth": 2
+                            }
+                        }
+                    },
+                    "title": {
+                        "text": "Hubungan antara tingkat literasi dengan kematian bayi"
+                    },
+                    "xaxis": {
+                        "anchor": "y",
+                        "domain": [0.0, 0.98],
+                        "title": {
+                            "text": "Infant mortality (per 1000 births)"
+                        }
+                    },
+                    "yaxis": {
+                        "anchor": "x",
+                        "domain": [0.0, 1.0],
+                        "title": {
+                            "text": "Literacy (%)"
+                        }
+                    }
+                }, {
+                    "responsive": true
+                }
+            ).then(function() {
+
+                var gd = document.getElementById('e399477d-4a40-4706-a2b7-f58250ce6552');
+                var x = new MutationObserver(function(mutations, observer) {
+                    {
+                        var display = window.getComputedStyle(gd).display;
+                        if (!display || display === 'none') {
+                            {
+                                console.log([gd, 'removed!']);
+                                Plotly.purge(gd);
+                                observer.disconnect();
+                            }
+                        }
+                    }
+                });
+
+                // Listen for the removal of the full notebook cells
+                var notebookContainer = gd.closest('#notebook-container');
+                if (notebookContainer) {
+                    {
+                        x.observe(notebookContainer, {
+                            childList: true
+                        });
+                    }
+                }
+
+                // Listen for the clearing of the current output cell
+                var outputEl = gd.closest('.output');
+                if (outputEl) {
+                    {
+                        x.observe(outputEl, {
+                            childList: true
+                        });
+                    }
+                }
+
+            })
+        };
+    });
+</script>
+
+</html>
